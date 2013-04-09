@@ -267,6 +267,10 @@ h1 {
   display: inline;
 }
 
+.unknown {
+  -moz-lolwat: ohlook;
+}
+
 .blank-slide {
   background: transparent;
   box-shadow: none;
@@ -277,6 +281,11 @@ h1 {
 
 span.error {
   color: red;
+}
+
+.fontbomb p {
+    width: 600px;
+    margin: 1em auto;
 }
 
 /*

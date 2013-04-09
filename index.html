@@ -73,7 +73,7 @@
             <li>&#177; March 2008 <a href="http://trac.webkit.org/wiki/WebInspector">WebInspector</a></li>
             <li>March 2009: <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-8">IE8</a></li>
             <li>May 2009: <a href="http://www.opera.com/dragonfly/">DragonFly</a></li>
-          <li>November 2011: <a href="https://hacks.mozilla.org/2011/11/developer-tools-in-firefox-aurora-10/">Native developer tools in FireFox</a></li>
+            <li>November 2011: <a href="https://hacks.mozilla.org/2011/11/developer-tools-in-firefox-aurora-10/">Native developer tools in FireFox</a></li>
         </ul>
     </div>
 
@@ -114,7 +114,7 @@
             <li>General: Disable cache, color format, word wrap, ...</li>
             <li>Overrides: UA, resoution (font-scale), geolocation, orientation, touch, ...</li>
             <li>(Workspace)</li>
-            <li><a href="chrome://flags/">Experiments</a>: FileSystem inspection, SASS support, ...</li>
+            <li>Experiments (<code>chrome://flags</code>): FileSystem inspection, SASS support, ...</li>
             <li>Shortcuts (? or F1)</li>
         </ul>
     </div>
@@ -130,6 +130,7 @@
           <li><code>jQuery($0);</code>, <code>$_</code> &amp; <code>inspect()</code> FTW!</li>
           <li>Per-frame execution and <code>cd()</code> frame traversal</li>
           <li>Can persist over page-calls</li>
+          <li><b>Catch!</b> $ in console doesn't always mean jQuery</li>
         </ul>
     </div>
 
@@ -141,12 +142,12 @@
         <ul class="bare">
           <li><a href="http://darcyclarke.me/design/skin-your-chrome-inspector/">Customizable</a> <a href="https://github.com/wesbos/aprilFools.css">for great good!</a> (it's just CSS &amp; JS, and that's what we do, right?)</li>
             <li>(rendered) DOM tree: shows location and dimensions on hover</li>
-            <li>(Computed) Style: new rule, emulate mouse actions, highlights triggering selector</li>
+            <li>(Computed) Style: new rule, emulate mouse state, highlights triggering selector</li>
             <li>Metrics: visual dimensions</li>
             <li>Properties: prototypal chain</li>
             <li>DOM breakpoints: break on mutation events</li>
             <li>Event Listenters: lists handlers on element or entire tree</li>
-            <li><span class="pseudo">elements</span> are listed</li>
+          <li><span class="pseudo">elements</span> and <span class="unknown">unknown properties</span> are listed!</li>
         </ul>
     </div>
 
@@ -157,7 +158,7 @@
         </header>
         <ul class="bare">
             <li>Per-frame and per-type list of assets</li>
-            <li>Cookies</li>
+            <li>(Secure) Cookies</li>
             <li>Various JavaScript storage APIs</li>
         </ul>
     </div>
@@ -187,7 +188,7 @@
         </header>
         <ul class="bare">
             <li>Main JavaScript debugging tool</li>
-            <li>Set breakpoints</li>
+            <li>Set breakpoints or use <code>debugger;</code></li>
             <li>Step through code bit by bit</li>
             <li>Monitor variables throughout the flow</li>
             <li>Pretty print!</li>
@@ -204,7 +205,8 @@
           <li>Events: Analyze events triggering costly repaints and blocking operations</li>
           <li>Frames: Analyze which frames are taking too long to draw and why</li>
           <li>Memory: Analyze memory usage and garbage collection</li>
-          <li><a href="http://ericduran.github.io/chromeHAR/">Timeline viewer</a></li>
+          <li><a href="http://ericduran.github.io/chromeHAR/">Timeline viewer</a> by Eric</li>
+          <li><a href="lags.html">lags</a></li>
         </ul>
     </div>
 
@@ -233,10 +235,12 @@
 
     <div id="lastthing" class="step slide" data-x="11000" data-y="0" data-z="-5000">
         <header>
-            <h1>One last thing</h1>
+            <h1>Before we get to it</h1>
         </header>
         <ul class="bare">
-          <li>It pays to know what you're debugging, use <a href="http://wappalyzer.com/">Wappalyzer</a> if you must</li>
+          <li>It pays to know what you're using, don't use jQuery 1.2.6 with a plugin that requires 1.9.1</li>
+          <li>RTFM! Seriously, it helps!</li>
+          <li>Live linting can save you a lot of time!</li>
         </ul>
     </div>
 
@@ -274,7 +278,7 @@
               <ul>
                 <li><a href="#">foo</a>
                 <li><a href="#">foo</a>
-                <li><a href="#">foo</a>
+                <li class="sprited"><a href="#">foo</a>
                 <li><a href="#">foo</a>
                 </li>
               </ul>            
@@ -294,13 +298,38 @@
         </header>
         <ul class="bare">
           <li><span class="error">ReferenceError: bananas is not defined</span>: bananas wasn't loaded at the time you tried to execute the code or it's not spelled that way.</li>
-          <li><span class="error">TypeError: Object [object Object] has no method 'bananas'</span>: The "bananas" library wasn't loaded.</li>
+          <li><span class="error">TypeError: Object [object Object] has no method 'bananas'</span>: The "bananas" library wasn't loaded (jQuery plugin?).</li>
           <li><a href="http://fixingthesejquery.com/">More from Adam</a></li>
         </ul>
     </div>
     
     <div id="silent" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
         <p>errors are easy, what if it fails <b class="silent">silently</b>?</p>
+    </div>
+    
+    <div id="takeaway" class="step" data-x="4313" data-y="4634" data-z="-3000" data-rotate="300" data-scale="1">
+        <header>
+            <h1>What I hope you take away from this</h1>
+        </header>
+        <ul class="bare">
+          <li>Know your tool</li>
+          <li>Modify it if you have to</li>
+          <li>Try everything</li>
+          <li>If you're really stuck, ask for help!</li>
+        </ul>
+    </div>
+    
+    <div id="references" class="step" data-x="2546" data-y="1453" data-z="-3000" data-rotate="300" data-scale="5">
+        <header>
+            <h1>Clicky clicky linky thingies</h1>
+        </header>
+        <ul class="bare">
+          <li><a href="https://getfirebug.com/wiki/">FireBug Wiki</a>, especially <a href="https://getfirebug.com/wiki/index.php/Console_api">Console API</a> and <a href="https://getfirebug.com/wiki/index.php/Command_Line_API">Command Line API</a></li>
+          <li><a href="http://www.youtube.com/results?search_query=the+breakpoint">The Breakpoint</a> with Addy and Paul</li>
+          <li><a href="http://fixingthesejquery.com/">Fixing These jQuery!</a> by adam</li>
+          <li><a href="http://msdn.microsoft.com/en-us/library/dd565627(v=vs.85).aspx">IE's Developer Tools documentation</a></li>
+          <li>If you're really stuck, ask for help!</li>
+        </ul>
     </div>
 
 </div>
