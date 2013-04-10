@@ -31,14 +31,23 @@
     console.log('HOLLA');
   };
   // Global initializers (so I can just enter it in the console)
-  window.makelag = function () {
+  window.makeNodes = function () {
     $(window).on('scroll', makeNodes);
   };
-  window.morelag = function() {
+  window.stopMake = function () {
+    $(window).off('scroll', makeNodes);
+  };
+  window.killBrowser = function() {
     $(window).on('scroll', killBrowser);
   };
-  window.stall = function() {
+  window.stopKill = function() {
+    $(window).off('scroll', killBrowser);
+  };
+  window.stallBrowser = function() {
     $(window).on('scroll', stallBrowser);
+  };
+  window.stopStall = function() {
+    $(window).off('scroll', stallBrowser);
   };
 
   // Async screwup demo
@@ -56,7 +65,7 @@
 
   // Regular typeError demo
   $('body').on('click', '.bugs', function () {
-    this.addClass('awesome');
+    $this.addClass('awesome');
   });
 
   // Silent fail demo
