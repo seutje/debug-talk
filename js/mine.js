@@ -54,19 +54,22 @@
   // Async screwup demo
   $('.async').on('click', function(e) {
     e.preventDefault();
-    var output = '';
+    var $this = $(this),
+        output = 'not what we want';
+    $this.addClass('loading');
     $.ajax({
       url: 'ajax.php',
       success: function(data) {
         output = data;
+        $this.removeClass('loading');
       }
     });
-    alert(output);
+    console.log(output);
   });
 
   // Regular typeError demo
   $('body').on('click', '.bugs', function () {
-    $this.addClass('awesome');
+    $(this).addClass('awesome');
   });
 
   // Silent fail demo
