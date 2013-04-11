@@ -393,6 +393,11 @@ span.error {
   background: transparent url('img/sprite.png') 0 100% no-repeat;
 }
 
+#references,
+#remote {
+  font-size: 35px;
+}
+
 #overview { display: none }
 
 /*
