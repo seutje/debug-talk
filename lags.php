@@ -35,6 +35,7 @@
     } ?>
     <div class="here"></div>
 <script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/jquery.throttle.min.js"></script>
 <script src="js/mine.js"></script>
 
 </body>

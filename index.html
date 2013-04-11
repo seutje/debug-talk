@@ -178,6 +178,7 @@
             <li>...</li>
             <li>Click to inspect headers</li>
             <li>See live websockets connections</li>
+            <li><a href="http://ericduran.github.io/chromeHAR/">Timeline viewer</a> by Eric</li>
         </ul>
     </div>
 
@@ -193,6 +194,7 @@
             <li>Monitor variables throughout the flow</li>
             <li>Pretty print!</li>
             <li>(Live editing)</li>
+          <li>Profile specific script blocks with <code>console.profile('name');</code> and <code>console.profileEnd('hai');</code></li>
         </ul>
     </div>
 
@@ -205,8 +207,6 @@
           <li>Events: Analyze events triggering costly repaints and blocking operations</li>
           <li>Frames: Analyze which frames are taking too long to draw and why</li>
           <li>Memory: Analyze memory usage and garbage collection</li>
-          <!--<li><a href="http://ericduran.github.io/chromeHAR/">Timeline viewer</a> by Eric</li>-->
-          <li><a href="lags.php">demo</a></li>
         </ul>
     </div>
 
@@ -315,6 +315,18 @@
         <p>errors are easy, what if it fails <b class="silent">silently</b>?</p>
     </div>
     
+    <div id="perf" class="step" data-x="4825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="3">
+        <header>
+            <h1>How about performance?</h1>
+        </header>
+        <ul class="bare">
+        	<li><a href="lags.php">Evented operations</a></li>
+        	<li><a href="jank.html">Costly effects</a></li>
+        	<li><a href="leak.html">Memory leaks</a></li>
+        	<li><a href="detached.html">Detached DOM elements</a></li>
+        </ul>
+    </div>
+    
     <div id="takeaway" class="step" data-x="4313" data-y="4634" data-z="-3000" data-rotate="300" data-scale="1">
         <header>
             <h1>What I hope you take away from this</h1>
@@ -334,6 +346,7 @@
         <ul class="bare">
           <li><a href="https://getfirebug.com/wiki/">FireBug Wiki</a>, especially <a href="https://getfirebug.com/wiki/index.php/Console_api">Console API</a> and <a href="https://getfirebug.com/wiki/index.php/Command_Line_API">Command Line API</a></li>
           <li><a href="http://www.youtube.com/results?search_query=the+breakpoint">The Breakpoint</a> with Addy and Paul</li>
+          <li><a href="http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/">Wait, Chrome DevTools could do THAT?</a> by Ilya</li>
           <li><a href="http://fixingthesejquery.com/">Fixing These jQuery!</a> by adam</li>
           <li><a href="http://msdn.microsoft.com/en-us/library/dd565627(v=vs.85).aspx">IE's Developer Tools documentation</a></li>
           <li>If you're really stuck, ask for help!</li>

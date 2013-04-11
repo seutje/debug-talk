@@ -1,6 +1,6 @@
 (function($) {
   // Block execution for x ms
-  var stall = function (ms) { var now = new Date().getTime(); while((new Date().getTime() - now) < ms) { } };
+  var stall = function (ms) { var start=Date.now();while(Date.now()<start+ms); };
   // FontBomb injector
   window.fontbomb = function () {
     var s = document.createElement('script');
@@ -8,7 +8,7 @@
     document.body.appendChild(s);
   };
   // Example of costly selector
-  var killBrowser = function() {
+  var brutal = function() {
     var shittySelector = 'body p ~ div[class*="thing"] > div[class*="thing"] > div[class*="thing"] > div:not([class*="not"])',
         shittySelector2 = 'body p ~ div[class*="thing"] > div[class*="thing"] > div[class*="thing"] > input:checkbox:checked',
         color = '#'+Math.floor(Math.random()*16777215).toString(16); // http://paulirish.com/2009/random-hex-color-code-snippets/
@@ -26,6 +26,7 @@
     }
   };
   // Stall browser before logging
+  // $.debounce(fn, [delay, callback, delayed, trailing]); https://github.com/mekwall/jquery-throttle
   var stallBrowser = function() {
     stall(200); // Simulate costly blocking operation
     console.log('HOLLA');
@@ -37,11 +38,11 @@
   window.stopMake = function () {
     $(window).off('scroll', makeNodes);
   };
-  window.killBrowser = function() {
-    $(window).on('scroll', killBrowser);
+  window.brutaljQuery = function() {
+    $(window).on('scroll', brutal);
   };
-  window.stopKill = function() {
-    $(window).off('scroll', killBrowser);
+  window.stopBrutal = function() {
+    $(window).off('scroll', brutal);
   };
   window.stallBrowser = function() {
     $(window).on('scroll', stallBrowser);
