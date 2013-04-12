@@ -84,4 +84,14 @@
   $('body').on('click', '.silent', function() {
     $('this').toggleClass('awesome');
   });
+
+  $('.scope').on('click', function() {
+    var foo = 'LOLAPI';
+    scopeFart();
+  });
+
+  var scopeFart = function() {
+    console.log(foo);
+  };
+
 })(jQuery);
