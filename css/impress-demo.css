@@ -300,7 +300,7 @@ span.error {
 */
 
 #title {
-    padding: 120px 0;
+    padding: 200px 0;
     text-align: center;
     background: transparent url('../img/d.o.png') 50% 50% no-repeat;
     text-shadow: 1px 1px 1px #fff;
@@ -399,7 +399,8 @@ span.error {
 }
 
 #references,
-#remote {
+#remote,
+#help{
   font-size: 35px;
 }
 

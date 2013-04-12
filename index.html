@@ -300,6 +300,7 @@
         <ul class="bare">
           <li><span class="error">ReferenceError: bananas is not defined</span>: bananas wasn't loaded at the time you tried to execute the code or it's not spelled that way.</li>
           <li><span class="error">TypeError: Object [object Object] has no method 'bananas'</span>: The "bananas" library wasn't loaded (jQuery plugin?).</li>
+          <li><span class="error">Error: SyntaxError: DOM Exception 12</span>: You are not using native functionality properly (usually a type in selector passed to jQuery)</li>
         </ul>
     </div>
 
@@ -309,6 +310,10 @@
 
     <div id="async" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="1">
         <p>How about <a class="async">asynchronous screwups?</a></p>
+    </div>
+
+    <div id="dynamic" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="1">
+        <p>Or <a>dynamic manipulation?</a></p>
     </div>
 
     <div id="deferred" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="1">
@@ -367,7 +372,20 @@
         </ul>
     </div>
 
-    <div id="bonus" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="15">
+    <div id="help" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="15">
+        <header>
+            <h1>Asking for help</h1>
+        </header>
+        <ul>
+          <li><a href="http://stackoverflow.com/">StackOverflow</a> or IRC (<a href="http://freenode.net">FreeNode</a>)</li>
+          <li>Be specific about your <b>goal</b>, not about your <b>problem</b></li>
+          <li>Try to create an isolated test case with <a href="http://jsfiddle.net">JSFiddle</a> or something</li>
+          <li>Make sure you <a href="http://google.com">Google</a> before bugging other people</li>
+          <li>Don't get angry when ppl suggest an optimization that's not related to your problem</li>
+        </ul>
+    </div>
+
+    <div id="bonus" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="18">
         <header>
             <h1>Bonus round</h1>
         </header>
@@ -379,7 +397,7 @@
         </ul>
     </div>
 
-    <div id="enough" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="18">
+    <div id="enough" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="21">
         <header>
             <h1>Still want more?</h1>
         </header>

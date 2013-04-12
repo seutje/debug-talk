@@ -67,13 +67,21 @@
     console.log(output);
   });
 
+  // Dynamic content manipulation
+  $('.dynamic').on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('awesome');
+  });
+
+  $('#dynamic a').addClass('dynamic');
+
   // Regular typeError demo
   $('body').on('click', '.bugs', function () {
-    $(this).addClass('awesome');
+    $this.toggleClass('awesome');
   });
 
   // Silent fail demo
   $('body').on('click', '.silent', function() {
-    $('this').remove();
+    $('this').toggleClass('awesome');
   });
 })(jQuery);
