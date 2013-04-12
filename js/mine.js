@@ -1,6 +1,6 @@
 (function($) {
   // Block execution for x ms
-  var stall = function (ms) { var start=Date.now();while(Date.now()<start+ms); };
+  window.stall = function (ms) { var start=Date.now();while(Date.now()<start+ms); };
   // FontBomb injector
   window.fontbomb = function () {
     var s = document.createElement('script');
