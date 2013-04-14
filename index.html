@@ -129,7 +129,7 @@
           <li><a href="https://getfirebug.com/wiki/index.php/Command_Line_API">Command line API</a></li>
           <li><code>jQuery($0);</code>, <code>$_</code> &amp; <code>inspect()</code> FTW!</li>
           <li>Per-frame execution and <code>cd()</code> frame traversal</li>
-          <li>Can persist over page-calls</li>
+          <!--<li>Can persist over page-calls</li>-->
           <li><b>Catch!</b> $ in console doesn't always mean jQuery</li>
         </ul>
     </div>
@@ -140,14 +140,14 @@
             <h1>Elements</h1>
         </header>
         <ul class="bare">
-          <li><a href="http://darcyclarke.me/design/skin-your-chrome-inspector/">Customizable</a> <a href="https://github.com/wesbos/aprilFools.css">for great good!</a> (it's just CSS &amp; JS, and that's what we do, right?) <a href="https://plus.google.com/+AddyOsmani/posts/UZF34wPJXsL">Some themes</a></li>
+            <li><a href="http://darcyclarke.me/design/skin-your-chrome-inspector/">Customizable</a> <a href="https://github.com/wesbos/aprilFools.css">for great good!</a> (it's just CSS &amp; JS, and that's what we do, right?) <a href="https://plus.google.com/+AddyOsmani/posts/UZF34wPJXsL">Some themes</a></li>
             <li>(rendered) DOM tree: shows location and dimensions on hover</li>
             <li>(Computed) Style: new rule, emulate mouse state, highlights triggering selector</li>
             <li>Metrics: visual dimensions</li>
             <li>Properties: prototypal chain</li>
             <li>DOM breakpoints: break on mutation events</li>
             <li>Event Listenters: lists handlers on element or entire tree</li>
-          <li><span class="pseudo">elements</span> and <span class="unknown">unknown properties</span> are listed!</li>
+            <li><span class="pseudo">elements</span> and <span class="unknown">unknown properties</span> are listed!</li>
         </ul>
     </div>
 
@@ -178,7 +178,7 @@
             <li>...</li>
             <li>Click to inspect headers</li>
             <li>See live websockets connections</li>
-            <li><a href="http://ericduran.github.io/chromeHAR/">Timeline viewer</a> by Eric</li>
+            <li><a href="http://ericduran.github.io/chromeHAR/">HAR viewer</a> by Eric</li>
         </ul>
     </div>
 
@@ -301,6 +301,7 @@
           <li><span class="error">ReferenceError: bananas is not defined</span>: bananas wasn't loaded at the time you tried to execute the code or it's not spelled that way.</li>
           <li><span class="error">TypeError: Object [object Object] has no method 'bananas'</span>: The "bananas" library wasn't loaded (jQuery plugin?).</li>
           <li><span class="error">Error: SyntaxError: DOM Exception 12</span>: You are not using native functionality properly (usually a type in selector passed to jQuery)</li>
+          <li><a href="duplicate.html">Duplicate IDs</a></li>
         </ul>
     </div>
 
@@ -332,6 +333,10 @@
           <li><a href="http://api.jquery.com/category/deferred-object/">The docs</a></li>
           <li><a href="http://www.youtube.com/watch?v=juRtEEsHI9E">I .promise() to show you .when() to use Deferreds</a> by Alex McPherson</li>
         </ul>
+    </div>
+
+    <div id="mystery" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="1">
+      <p>How about <span>mystery styles</span></p>
     </div>
     
     <div id="perf" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="3">

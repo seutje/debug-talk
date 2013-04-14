@@ -94,4 +94,6 @@
     console.log(foo);
   };
 
+  $('#mystery span').css('color', 'yellowgreen');
+
 })(jQuery);
